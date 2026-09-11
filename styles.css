@@ -305,6 +305,36 @@ section { position: relative; }
 
 .link-arrow { font-size: 14.5px; font-weight: 600; color: var(--gold-light); display: inline-flex; align-items: center; gap: 6px; border-bottom: 1px solid rgba(227, 197, 129, 0.4); padding-bottom: 2px; }
 
+/* Asesorías */
+.asesorias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.asesoria {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.asesoria:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.asesoria .tag { font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px; }
+.asesoria h3 { margin-bottom: 12px; }
+
+.price-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 14px; }
+.price-row .price-num { font-family: var(--heading); font-weight: 700; font-size: 26px; }
+.price-row .price-per { font-size: 13px; color: var(--ink-faint); }
+
+.asesoria .desc { color: var(--ink-soft); font-size: 14.5px; margin-bottom: 22px; }
+
+.asesoria .features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; flex: 1; }
+.asesoria .features li { font-size: 13.5px; color: var(--ink-soft); padding-left: 22px; position: relative; }
+.asesoria .features li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-dark); font-weight: 700; }
+
+.asesoria-footer { padding-top: 20px; border-top: 1px solid var(--line); }
+.asesoria-footer .btn { width: 100%; padding: 11px 20px; font-size: 13.5px; }
+
 /* Programas */
 .programas-section { background: var(--cream); }
 .programas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -392,6 +422,7 @@ footer { background: var(--charcoal); color: rgba(255, 255, 255, 0.55); padding:
   .pilares { grid-template-columns: 1fr; }
   .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
   .programas { grid-template-columns: 1fr; }
+  .asesorias-grid { grid-template-columns: 1fr; }
   .testi-scroll { grid-template-columns: 1fr; }
 }
 
