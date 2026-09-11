@@ -347,6 +347,18 @@ section { position: relative; }
 .asesoria-footer { padding-top: 20px; border-top: 1px solid var(--line); }
 .asesoria-footer .btn { width: 100%; padding: 11px 20px; font-size: 13.5px; }
 
+/* App */
+.app-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+
+.app-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 28px 0 34px; }
+.app-features li { font-size: 15px; color: var(--ink-soft); padding-left: 24px; position: relative; }
+.app-features li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-dark); font-weight: 700; }
+
+.app-note { font-size: 13px; color: var(--ink-faint); margin-top: 16px; }
+
+.app-icon-wrap { display: flex; justify-content: center; }
+.app-icon-wrap img { width: 200px; height: 200px; border-radius: 44px; box-shadow: var(--shadow-md); }
+
 /* Programas */
 .programas-section { background: var(--cream); }
 .programas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -435,6 +447,8 @@ footer { background: var(--charcoal); color: rgba(255, 255, 255, 0.55); padding:
   .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
   .programas { grid-template-columns: 1fr; }
   .asesorias-grid { grid-template-columns: 1fr; }
+  .app-grid { grid-template-columns: 1fr; gap: 40px; }
+  .app-icon-wrap { order: -1; }
   .testi-scroll { grid-template-columns: 1fr; }
 }
 
