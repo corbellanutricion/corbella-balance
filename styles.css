@@ -439,6 +439,25 @@ footer { background: var(--charcoal); color: rgba(255, 255, 255, 0.55); padding:
 .footer-socials a:hover { color: var(--gold-light); }
 .footer-bottom { font-size: 12.5px; letter-spacing: 0.03em; color: rgba(255, 255, 255, 0.35); }
 
+/* Cookie banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+}
+.cookie-banner p { font-size: 13.5px; margin: 0; max-width: 560px; }
+.cookie-banner .btn { padding: 10px 22px; font-size: 13.5px; flex-shrink: 0; }
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }

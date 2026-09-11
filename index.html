@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#fbfaf7">
+<style>html{background:#fbfaf7}</style>
 <title>Corbella Balance | Nutrición y Entrenamiento en Querétaro</title>
 <meta name="description" content="Planes de nutrición y entrenamiento en Querétaro, presenciales y en línea. Coaching personalizado con Azael López Corbella, nutriólogo certificado.">
 <meta property="og:title" content="Corbella Balance — Nutrición y Entrenamiento">
@@ -335,6 +338,11 @@
   </div>
 </footer>
 
+<div class="cookie-banner" id="cookieBanner" hidden>
+  <p>Usamos cookies propias y de Google Analytics para mejorar tu experiencia y entender cómo usas el sitio. Al seguir navegando, aceptas su uso.</p>
+  <button class="btn btn-solid" id="cookieAccept">Entendido</button>
+</div>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GZ9KGZB1L"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -354,6 +362,15 @@
       header.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
     });
+  });
+
+  var cookieBanner = document.getElementById('cookieBanner');
+  try {
+    if (!localStorage.getItem('cb_cookies_ok')) cookieBanner.hidden = false;
+  } catch (e) { cookieBanner.hidden = false; }
+  document.getElementById('cookieAccept').addEventListener('click', function () {
+    cookieBanner.hidden = true;
+    try { localStorage.setItem('cb_cookies_ok', '1'); } catch (e) {}
   });
 
   if ('IntersectionObserver' in window) {
