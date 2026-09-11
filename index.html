@@ -335,6 +335,11 @@
   </div>
 </footer>
 
+<div class="cookie-banner" id="cookieBanner" hidden>
+  <p>Usamos cookies propias y de Google Analytics para mejorar tu experiencia y entender cómo usas el sitio. Al seguir navegando, aceptas su uso.</p>
+  <button class="btn btn-solid" id="cookieAccept">Entendido</button>
+</div>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GZ9KGZB1L"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -354,6 +359,15 @@
       header.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
     });
+  });
+
+  var cookieBanner = document.getElementById('cookieBanner');
+  try {
+    if (!localStorage.getItem('cb_cookies_ok')) cookieBanner.hidden = false;
+  } catch (e) { cookieBanner.hidden = false; }
+  document.getElementById('cookieAccept').addEventListener('click', function () {
+    cookieBanner.hidden = true;
+    try { localStorage.setItem('cb_cookies_ok', '1'); } catch (e) {}
   });
 
   if ('IntersectionObserver' in window) {
