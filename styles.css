@@ -275,6 +275,8 @@ section { position: relative; }
 .testi-fotos { display: flex; gap: 8px; margin-bottom: 20px; }
 .foto-frame { position: relative; flex: 1; border-radius: var(--radius-sm); overflow: hidden; aspect-ratio: 3 / 4; }
 .foto-frame img { width: 100%; height: 100%; object-fit: cover; }
+.foto-frame-wide { aspect-ratio: 3 / 4; object-position: top; }
+.testi-card-single .foto-frame img { object-position: top; }
 
 .foto-label {
   position: absolute; bottom: 8px; left: 8px;
